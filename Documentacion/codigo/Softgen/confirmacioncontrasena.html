@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="confirmacioncontrasena.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="border rounded">
+        <form method="post" action="iniciarSesion" onsubmit="return validarcontrasena()">
+            <h3 class="border-bottom text-center mt-2" >Confirmación de contraseña</h3>
+            <input type="password" class="mt-3" id="contrasena" name="contrasena" placeholder="Contraseña" required min="6" max="6"> <br>
+            <input type="password" class="mt-2" id="confirmarcontrasena" name="confirmas-contrasena" placeholder="confirme su contraseña" required min="6" max="6"> <br>
+            <input type="submit" class="mt-2" value="Confirmar">
+        </form>
+    </section>
+
+    <script>
+
+
+        function validarcontrasena() {
+            const contrasena = document.getElementById('contrasena').value;
+            const confirmarcontrasena = document.getElementById('confirmarcontrasena').value;
+            if (contrasena !== confirmarcontrasena){
+                alert("Las contraseñas no coincide, intente de nuevo");
+                return false;
+            }
+
+            if(contrasena.length !== 6){
+                alert("Las contraseñas  deben tener excatamente 6 caracteres.");
+                return false;
+            }
+
+            alert("Cambio Correcto")
+            return true;
+            
+            
+        }
+    </script>
+
+
+
+</body>
+</html>

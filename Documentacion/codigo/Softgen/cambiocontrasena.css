@@ -1,0 +1,25 @@
+body{
+    padding-inline: 100px;
+    margin-top: 80px;
+}
+
+.container{
+    margin: auto;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    background-color: #e4f7ff;
+}
+
+.mb-3{
+    text-align: center;
+    width: 300px;
+    margin-left: 50px;
+}
+
+button{
+    margin-top: 60px;
+}
+
+
+

@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+}
+.encabezado{
+    background-color: #e4f7ff ;
+    height: 80px;
+    
+}
+
+nav a{
+    float: right;
+    margin: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    color: #4aa9d9;
+}
+
+.col{
+    height: 80px;
+    text-align: center;
+    align-content: center;
+}
+h3{
+    font-size: 25px;
+    color: #ffff;
+    border: solid #e4f7ff;
+    width: 400px;
+    height: 40px;
+    margin: auto;
+}
+
+.objetivos{
+    border: solid 1px;
+    height: 200px;
+    width: 29%;
+    margin: 10px;
+    float: left;
+}
+
+.objetivos div{
+    margin: 20px;
+    border: solid 4px;
+    width: 90px;
+    height: 25px;
+    text-align: center;
+}
+
+p{
+    margin: 10px;
+}
+
+.mision{
+    border: solid 1px;
+    height: 200px;
+    width: 29%;
+    margin: auto;
+    margin-top: 100px;
+    
+}
+.mision div {
+    margin: 20px;
+    border: solid 4px;
+    width: 90px;
+    height: 25px;
+    text-align: center;
+}
+
+.vision{
+    border: solid 1px;
+    height: 200px;
+    width: 29%;
+    margin: 10px;
+    margin-top: -290px;
+    float: right;
+}
+
+.vision div{
+    margin: 20px;
+    border: solid 4px;
+    width: 90px;
+    height: 25px;
+    text-align: center;
+}

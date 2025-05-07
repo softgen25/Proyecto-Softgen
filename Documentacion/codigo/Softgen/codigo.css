@@ -1,0 +1,40 @@
+body{
+    margin: 100px;
+    
+}
+
+section{
+    margin: auto;
+    background-color: silver;
+    height: 350px;
+    width: 500px;
+    border-radius: 5px ;
+}
+
+h2{
+    margin: auto;
+    
+    height: 40px;
+}
+
+.mb-3{
+    width: 280px;
+    text-align: center;
+    margin-top: 50px;
+    margin:auto;
+    background-color: thistle;
+    border-radius: 6px
+}
+
+#codigo{
+    margin: auto;
+    margin-top: 30px;
+    width: 200px;
+
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}

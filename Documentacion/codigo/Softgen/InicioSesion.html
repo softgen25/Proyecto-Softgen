@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftGen</title>
+    <link rel="stylesheet" href="estilossoftgen/Iniciarsesion.css">
+</head>
+<body>
+    <header>
+        <div class="logos">
+        <h1>BIENVENIDOS A</h1>
+        <img class="logo" src="img/ICONO 2.0.png" height="90px">
+        <img class="logo" src="img/SOFTGEN 3.0.png" height="80px">
+        </div>
+    </header>
+<body class="body2">
+    <div class="container">
+        <section>
+            <h2>Iniciar Sesion</h2>
+            <select name="rol" id="rol">
+                <option value="Rol">Rol</option>
+                <option value="Tecnico">Tecnico</option>
+                <option value="Cliente">Cliente</option>
+                <option value="Administrador">Administrador</option>
+            </select>
+            <form id="Login">
+            <br> 
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="password" placeholder="Contraseña" name="password" required>
+                <a href="">¿Olvido su contraseña?</a>
+                <button type="button" onclick="window.location.href='index.html'">Iniciar Sesión</button>
+                <button onclick="window.location.href='index.html'" class="btn-primary">Registrarse</button>
+            </form>
+        </section>
+    </div>
+</body>
+    <footer>
+        <select>
+            <option value="español">Español </option>
+            <option value="ingles">Ingles</option>
+            <option value="frances">Frances</option>
+        </select>
+    </footer>
+</body>
+</html>              

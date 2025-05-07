@@ -1,0 +1,15 @@
+body{
+    margin: 100px;
+}
+
+section{
+    width: 40%;
+    background-color: #e4f7ff;
+    height: 230px;
+    margin: auto;
+
+}
+
+input{
+    margin: 20px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="cambiocontrasena.css">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 400px;
+            margin-top: 50px;
+        }
+        .alert {
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container border rounded">
+        <h2 class="text-center border-bottom">Cambio de Contraseña</h2>
+        <form method="post" action="codigo.html" onsubmit="return validarFormulario()">
+            <div class="mb-3">
+                <label for="email" class="form-label">Inserta Correo Electrónico</label>
+                <input type="email" class="form-control" placeholder="Correo electronico" id="email" name="email" required>
+            </div>
+            <button type="submit" class="btn btn-danger w-100">Enviar</button>
+        </form>
+ 
+
+    </div>
+
+    <script>
+
+        function validarFormulario() {
+            const email = document.getElementById('email').value;
+            if (!email) {
+                alert("Ingresa su correo electrónico.");
+                return false;
+            }
+            // Redirigir a codigo.html
+            window.location.href = "codigo.html";
+            return false; // Evita que el formulario se envíe
+        }
+        return true;
+    </script>
+
+    
+</body>
+</html>
