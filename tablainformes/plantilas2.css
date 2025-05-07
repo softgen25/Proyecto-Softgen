@@ -1,0 +1,322 @@
+/* Estilos Generales y Base */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Saira', sans-serif; 
+    padding-top: 80px;
+    background-color: #ffffff;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1; /* Empuja el footer hacia abajo */
+}
+
+/* Estilos de la Cabecera (Header) */
+header {
+    background-color: #e4f7ff;
+    height: 80px; 
+    z-index: 1030; /* Encima de otros elementos (Bootstrap usa 1030 para fixed navbar) */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de Navegación (Navbar) */
+.navbar {
+    padding-top: 0; /* Ajustar padding si es necesario */
+    padding-bottom: 0;
+}
+
+.navbar-brand img {
+    max-height: 60px;
+    width: auto;
+}
+
+.nav-link {
+    color: #135787;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Transición suave */
+    padding: 0.8rem 1rem; /* Ajustar padding */
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    font-weight: bold;
+    color: #135787; 
+    background-color: rgba(0, 86, 179, 0.1); 
+    border-radius: 4px;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px); 
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.5rem; 
+    color: #135787;
+}
+
+.navbar-toggler:focus {
+   box-shadow: none; 
+}
+
+/* Ajustes para el menú desplegable en móvil */
+#navbarNav {
+    background-color: #e4f7ff; 
+}
+
+@media (max-width: 991.98px) {
+    #navbarNav {
+        padding: 1rem;
+    }
+     .navbar-nav .nav-link {
+        padding: 0.5rem 0; /* Ajustar padding en móvil */
+    }
+}
+
+/* Estilos del Menú de Plantillas */
+.menu-container {
+    display: flex;
+    justify-content: center; /* Centra el menú */
+    background-color: #ffffff; /* Fondo blanco para el contenedor del menú */
+    padding: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+}
+
+.menu, .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alinea los items principales horizontalmente */
+    flex-wrap: wrap; /* Permite que los items pasen a la siguiente línea si no caben */
+    justify-content: center;
+}
+
+.menu > li {
+    position: relative; /* Necesario para el posicionamiento absoluto del submenu */
+    margin: 5px 10px;
+}
+
+.menu li a {
+    background-color:#e4f7ff; /* Fondo azul muy claro */
+    color: #135787; /* Color de texto */
+    text-decoration: none;
+    padding: 10px 20px; /* Relleno */
+    display: block;
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; 
+    border: 1px solid #d1eaff; 
+}
+
+.menu li a:hover,
+.menu li a:focus {
+    background-color: #135787; 
+    color: #ffffff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Estilos del Submenú Desplegable */
+.menu > li > ul {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: white;
+    min-width: 200px; /* Ancho mínimo */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    z-index: 1000; 
+    border-radius: 5px; 
+    padding: 5px 0; 
+    border: 1px solid #eee;
+    flex-direction: column; /* Apila los items verticalmente */
+    flex-wrap: nowrap;
+}
+
+.menu > li:hover > ul,
+.menu > li:focus-within > ul { /* Muestra el submenú al hacer hover o focus en el li */
+    display: flex;
+}
+
+.menu > li > ul li {
+    width: 100%; /* Ocupa todo el ancho del submenú */
+    margin: 0;
+}
+
+.menu > li > ul li a {
+    background-color: white;
+    color: #333;
+    padding: 8px 15px; 
+    border-radius: 0; 
+    border: none; 
+    box-shadow: none; 
+}
+
+.menu > li > ul li a:hover,
+.menu > li > ul li a:focus {
+    background-color: #e9ecef;
+    color: #135787;
+}
+
+
+
+.plantillas-section {
+    padding-top: 20px;
+}
+
+/* Oculta todas las categorías por defecto */
+.plantilla-categoria {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out; 
+}
+
+/* Muestra la categoría activa */
+.plantilla-categoria.active {
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.plantilla-card .card {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #dee2e6; /* Borde estándar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+}
+
+.plantilla-card:hover .card {
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Sombra más pronunciada */
+}
+
+.plantilla-card .card-img-top {
+    height: 200px;
+    object-fit: cover; 
+    border-bottom: 1px solid #eee; 
+}
+
+.plantilla-card .card-body {
+    color: #333; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.plantilla-card .card-title {
+    color: #135787; /* Color del título */
+    margin-bottom: 0.5rem;
+}
+
+.plantilla-card .card-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+    flex-grow: 1; 
+    margin-bottom: 1rem;
+}
+
+/* Botón personalizado */
+.btn-softgen {
+    background-color: #1982c4; /* Azul principal */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start; /* Alinea el botón al inicio del eje transversal */
+}
+
+.btn-softgen:hover,
+.btn-softgen:focus {
+    background-color: #135787; /* Azul más oscuro */
+    color: white;
+    transform: scale(1.05); /* Ligero aumento de tamaño */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilos del Pie de Página (Footer) */
+#piePagina {
+    background: linear-gradient(45deg, #135787, #1982c4); 
+    color: white;
+    padding: 40px 0 0 0; 
+    text-align: center;
+    margin-top: auto; 
+}
+
+#piePagina h5 {
+    font-size: 1.2rem; 
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff; 
+}
+
+#piePagina ul {
+    padding: 0;
+    list-style: none;
+}
+
+#piePagina ul li {
+    margin-bottom: 10px;
+}
+
+#piePagina a {
+    color: #e4f7ff; 
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+#piePagina a:hover,
+#piePagina a:focus {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+#piePagina i {
+    font-size: 1.1rem;
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+    vertical-align: middle; 
+}
+
+#piePagina a:hover i,
+#piePagina a:focus i {
+    transform: scale(1.2); 
+}
+
+/* Sección de Derechos de Autor */
+#derechos {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
+    margin-top: 40px; 
+    font-size: 0.9rem;
+}
+
+/* Media Queries (Ajustes Responsivos) */
+@media (min-width: 768px) {
+    #piePagina {
+        text-align: left; 
+    }
+    #piePagina .col-md-4 {
+        margin-bottom: 0; /* Quita margen inferior en columnas en desktop */
+    }
+}

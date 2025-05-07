@@ -1,0 +1,235 @@
+
+header {
+  background-color: #e4f7ff;
+  height: 60px;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+
+.nav-link{
+  font-family: saira;
+  text-decoration: none;
+  color: #135787;
+  background-color: #e4f7ff;
+  z-index: 1;
+}
+
+
+
+.nav-link:hover{
+  font-size: 20px;
+  color: #000;
+  text-decoration: underline;
+}
+
+
+#navbarNav{
+  background-color: #e4f7ff;
+}
+
+.navbar-toggler {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
+
+body{
+  margin-top: 1000px;
+  padding: 0;
+  width: 100%;
+  overflow-y: auto;
+}
+.left-col{
+  height: 850px;
+  width: 10%;
+  background-color: #e4f7ff;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0 !important;
+}
+
+
+.right-col{
+  width: 90%;
+  height: 850px;
+  align-items: center;
+  padding: 0 !important;
+  margin: 0;
+  flex-direction: column;
+}
+
+h1{
+  width: 100%;
+  background-color: #135787;
+  color: #fff;
+}
+
+
+.left-col, .right-col {
+  min-height: 50vh; /* Mitad de la pantalla en móviles */
+}
+
+@media (max-width: 767.98px){
+  .left-col, .right-col{
+    min-height: 50vh;
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .left-col, .right-col {
+    min-height: 100vh; /* Ocupa toda la altura en pantallas grandes */
+  }
+}
+
+.rebote{
+    animation: rebote 1.5s ease-in-out infinite alternate;
+}
+@keyframes rebote {
+    0% {
+      transform: translateY(0); 
+    }
+    100% {
+      transform: translateY(-30px);
+    }
+  }
+
+.rebote:hover{
+    animation-duration:0.5s ;
+    animation-timing-function: ease-out;
+}
+
+.cartas{
+  display: flex;
+}
+
+.card-container {
+  perspective: 1000px;
+  height: 320px;
+  width: 250px;
+  justify-content: center;
+  
+}
+
+.card-img-center{
+  margin-left: 90px;
+}
+p{
+  margin-left: 10px;
+}
+
+.fecha{
+  width: 200px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.btn-primary{
+  margin: auto;
+}
+
+.card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s, z-index 0.6s;
+  border-radius: 0.25rem;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+#piePagina {
+  background: linear-gradient(45deg, #135787, #1982c4);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  font-family: saira;
+}
+
+/* Estilo para los títulos del footer */
+#piePagina h5 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Espaciado entre los elementos de la lista */
+#piePagina ul {
+  padding: 0;
+  list-style: none;
+}
+
+#piePagina ul li {
+  margin: 8px 0;
+}
+
+/* Enlaces del footer */
+#piePagina a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+#piePagina a:hover {
+  color: #ffcc00; /* Amarillo suave */
+  text-decoration: underline;
+}
+
+/* Íconos más grandes y con efecto */
+#piePagina i {
+  font-size: 1.3rem;
+  margin-right: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#piePagina a:hover i {
+  transform: scale(1.2);
+}
+
+/* Separación entre las secciones */
+#piePagina .col-md-4 {
+  margin-bottom: 20px;
+}
+
+/* Línea superior para separar derechos de autor */
+#derechos {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+
+.card {
+  transition: transform 0.3s ease-in-out;
+  font-family: saira;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.btn-softgen {
+  background-color: #135787;
+  color: #e4f7ff;
+  transition: background 0.5s ease-in-out, color 0.3s ease-in-out;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-softgen:hover {
+  background: linear-gradient(45deg, #0e4568, #1982c4);
+  color: white;
+}
+
+
+

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restablecer Contraseña - SoftGen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/iniciosesion.css"> <link rel="icon" type="image/png" sizes="16x16" href="img/Logo Favicon 16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Logo favicon 1.0.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="img/Logo Favicon 180x180.png">
+</head>
+<body>
+    <header>
+        <div class="logo text-center">
+            <img src="img/Logo completo.png" class="m-3" alt="Logo SoftGen" height="90px">
+        </div>
+    </header>
+
+    <div class="container pt-5 main-content">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="login-container text-center">
+                    <h3 class="mb-3">Restablecer Contraseña</h3>
+                    <hr>
+                    <p class="text-muted mb-4">Ingresa el código que recibiste por correo y tu nueva contraseña.</p>
+
+                    <div id="mensaje" class="mb-3"></div>
+
+                    <form action="php/reset_password.php" method="POST" id="resetPasswordForm">
+
+                        <input type="hidden" name="token" id="token_from_url">
+
+                        <div class="mb-3">
+                            <label for="reset_code" class="visually-hidden">Código de Verificación</label>
+                            <input type="text" class="form-control" placeholder="Código de Verificación" name="reset_code" id="reset_code" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="nueva_contrasena" class="visually-hidden">Nueva Contraseña</label>
+                            <input type="password" class="form-control" placeholder="Nueva Contraseña" name="nueva_contrasena" id="nueva_contrasena" required autocomplete="new-password">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="confirmar_contrasena" class="visually-hidden">Confirmar Nueva Contraseña</label>
+                            <input type="password" class="form-control" placeholder="Confirmar Nueva Contraseña" name="confirmar_contrasena" id="confirmar_contrasena" required autocomplete="new-password">
+                            <div id="passwordMismatchError" class="invalid-feedback">
+                                Las contraseñas no coinciden.
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="submit" class="btn btn-primary">Restablecer Contraseña</button>
+                        </div>
+                        <div class="text-center">
+                            <a href="iniciosesion.html" class="btn btn-link">Volver a Iniciar Sesión</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-white mt-auto" id="piePagina">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li><a href="creacion.html" class="text-white text-decoration-none">Creación</a></li>
+                        <li><a href="visualizacion.html" class="text-white text-decoration-none">Visualización</a></li>
+                        <li><a href="soporte.html" class="text-white text-decoration-none">Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5> Información de Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt"></i> Dirección: Calle 90 #12-35, Bogotá, Colombia</li>
+                        <li><i class="bi bi-telephone"></i> Teléfono: +57 312 857 7856</li>
+                        <li><i class="bi bi-envelope"></i> Correo: info@jataair.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Síguenos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/profile.php?id=61574843906898" class="text-white text-decoration-none"><i class="bi bi-facebook"></i> Facebook</a></li>
+                        <li><a href="https://x.com/Softgen291521" class="text-white text-decoration-none"><i class="bi bi-twitter-x"></i> Twitter</a></li>
+                        <li><a href="https://www.instagram.com/softg_en?igsh=amp3dmF3dzdqbWtq" class="text-white text-decoration-none"><i class="bi bi-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3" id="derechos">
+            <p class="mb-0">&copy; 2025 SoftGen. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const mensajeDiv = document.getElementById('mensaje');
+            const tokenInput = document.getElementById('token_from_url');
+            const resetForm = document.getElementById('resetPasswordForm');
+            const passwordInput = document.getElementById('nueva_contrasena');
+            const confirmPasswordInput = document.getElementById('confirmar_contrasena');
+            // Cambiado de password-mismatch a invalid-feedback para usar estilos de Bootstrap
+            const mismatchErrorDiv = resetForm.querySelector('#passwordMismatchError'); // Seleccionar dentro del formulario
+
+            // 1. Populate hidden token field from URL parameter (e.g., ?token=ABCDEF)
+            if (params.has('token')) {
+                tokenInput.value = params.get('token');
+            } else {
+                 // Display an error or disable the form if token is missing
+                console.warn('Token no encontrado en la URL.');
+                mensajeDiv.innerHTML = `<div class="alert alert-warning">Falta el token de restablecimiento. Asegúrate de usar el enlace correcto de tu correo.</div>`;
+                 // Optionally disable form fields
+                resetForm.querySelectorAll('input, button').forEach(el => el.disabled = true);
+            }
+
+            // 2. Display messages from URL parameters (error/exito)
+            if (params.has('error')) {
+                mensajeDiv.innerHTML = `<div class="alert alert-danger">${decodeURIComponent(params.get('error'))}</div>`;
+            } else if (params.has('exito')) {
+                mensajeDiv.innerHTML = `<div class="alert alert-success">${decodeURIComponent(params.get('exito'))}</div>`;
+                // Optionally disable form fields after success
+                resetForm.querySelectorAll('input, button').forEach(el => el.disabled = true);
+            }
+
+            // 3. Add event listener for form submission to check password match
+            if (resetForm) { // Asegurarse de que el formulario existe
+                resetForm.addEventListener('submit', function(event) {
+                    // Reset error display
+                    mismatchErrorDiv.style.display = 'none';
+                    confirmPasswordInput.classList.remove('is-invalid');
+
+                    // Check if passwords match
+                    if (passwordInput.value !== confirmPasswordInput.value) {
+                        // Prevent form submission
+                        event.preventDefault();
+                        // Show error message
+                        mismatchErrorDiv.style.display = 'block';
+                        confirmPasswordInput.classList.add('is-invalid'); // Add Bootstrap invalid style
+                        passwordInput.classList.add('is-invalid'); // También marcar el primer campo como inválido
+                        confirmPasswordInput.focus(); // Focus the confirmation field
+                    }
+                    // If passwords match, the form will submit normally
+                });
+
+                 // Optional: Real-time password match check as user types in confirmation field
+                confirmPasswordInput.addEventListener('input', function() {
+                    if (passwordInput.value !== confirmPasswordInput.value && confirmPasswordInput.value !== '') {
+                        mismatchErrorDiv.style.display = 'block';
+                        confirmPasswordInput.classList.add('is-invalid');
+                         passwordInput.classList.add('is-invalid'); // Marcar también el primero
+                    } else {
+                        mismatchErrorDiv.style.display = 'none';
+                        confirmPasswordInput.classList.remove('is-invalid');
+                         // Solo quitar la clase 'is-invalid' del primer campo si no está vacío
+                        if(passwordInput.value !== '') passwordInput.classList.remove('is-invalid');
+                    }
+                });
+                passwordInput.addEventListener('input', function() {
+                     // Also check confirmation field when the main password changes
+                    if (confirmPasswordInput.value !== '' && passwordInput.value !== confirmPasswordInput.value) {
+                        mismatchErrorDiv.style.display = 'block';
+                        confirmPasswordInput.classList.add('is-invalid');
+                         passwordInput.classList.add('is-invalid'); // Marcar también el primero
+                    } else if (confirmPasswordInput.value !== '') {
+                        mismatchErrorDiv.style.display = 'none';
+                        confirmPasswordInput.classList.remove('is-invalid');
+                         // Solo quitar la clase 'is-invalid' del primer campo si no está vacío
+                        if(passwordInput.value !== '') passwordInput.classList.remove('is-invalid');
+                    }
+                });
+            } // Fin del if(resetForm)
+
+        });
+    </script>
+</body>
+</html>
+
