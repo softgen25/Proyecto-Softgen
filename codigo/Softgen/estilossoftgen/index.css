@@ -1,0 +1,104 @@
+body {
+    font-family: sans-serif; 
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  header {
+    display: flex; 
+    align-items: center; 
+    padding: 20px;
+    background-color: #b3e5fc;
+  }
+
+  .header-content {
+    display: flex; 
+    justify-content: space-between; 
+    
+  }
+  
+  
+  
+  nav {
+    display: flex; 
+    
+
+  }
+  
+  nav a {
+    text-decoration: none;
+    padding: 10px; 
+    transition: color 0.3s ease;
+    margin-right: -300px;
+    margin-left: 380px;
+    font-size: 20px;
+    
+  }
+
+
+  nav a:hover{
+    color: #007bff;
+  }
+
+  section{
+    display: flex;
+    align-items: center;
+  }
+  
+
+  h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+  }
+  .bienvenida img{
+    display: block;
+    margin: auto;
+    margin-left: -400px;
+  
+  }
+
+  span{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 200px;
+    width: 400px;
+    margin: auto;
+    border: solid black;
+    float: none;
+  }
+
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #f0f0f0; 
+    text-align: left;
+  }
+  
+  footer select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent; 
+    border: none; 
+    padding: 0; 
+    font-size: inherit; 
+    cursor: pointer; 
+  }
+  
+  footer select:focus {
+    outline: none;
+  }
+  
+  footer .idioma {
+    color: #333;
+  }
+  
+ 
+  

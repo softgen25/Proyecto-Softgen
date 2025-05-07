@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="codigo.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="border rounded p-3 ">
+            <h2 class="text-center border-bottom">Cambio de contraseña</h2> <br> 
+            <form method="post" action="confirmacioncontrasena.html" onsubmit="return validarFormulario()" >
+                <div class="mb-3">
+                    <label for ="codigo" class="form-label" style="font-size: 15px; " >Inserte el codigo enviado a su correo electronico</label>
+                </div>
+                <input type="text" class="form-control " placeholder="codigo" id="codigo" name="codigo" required maxlength="6" minlength="6">   
+                <small id="mensaje de verificación" class="form-text"></small>
+                <nav class="d-flex justify-content-center mt-3">
+                    <a href="reenviar">Reenviar codigo</a>
+                </nav>
+
+                
+            </form>
+            <div id="mensaje-resultado" class="alert mt-3" style="display: none;"></div>
+
+    </section>
+    
+    <script>
+        const codigoInput = document.getElementById('codigo');
+        const mensajeVerificacion = document.getElementById('mensaje-verficacion');
+        const mensajeResultado = document.getElementById('mensaje-resultado');
+
+        codigoInput.addEventListener('input', function(){
+            const codigoIngresado = codigoInput.value;
+
+            if(codigoIngresado.length == 6){
+                validarCodigo(codigoIngresado);
+            } else {
+                mensajeVerificacion.textContent = '';
+                mensajeResultado.style.display = 'none';
+            }
+        });
+
+        function validarCodigo(codigo){
+            fetch('verificar-codigo.php',{
+                method: 'POST',
+                headers:{
+                    'content-type': 'inicioSesion.html',
+
+                },
+                body: `codigo=${encodeURIComponent(codigo)}` ,
+            })
+            .then(response = responde.json())
+            .then(data => {
+                if (data.success){
+                    mensajeVerificacion.textContent = 'Codigo Valido.';
+                    mensajeVerificacion.className = 'form-text success' ;
+                    mensajeRseultado.textContent = 'Codigo verificado correctamente. Redirigiendo...';
+                    mensajeResultado.classname = 'alert alert-success';
+                    mensajeResultado.style.display = 'block';
+                }
+                setTimeout(() => {
+                        window.location.href = "confirmacioncontrasena.html";
+                    }, 2000); // 2000 milisegundos = 2 segundos
+
+                })
+            }
+            return true
+
+    </script>
+
+</body>
+</html>

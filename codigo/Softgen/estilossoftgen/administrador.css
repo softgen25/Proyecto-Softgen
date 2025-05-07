@@ -1,0 +1,119 @@
+header{
+    background-color: #e4f7ff ;
+    height: 120px;
+    width: 100%;
+    padding: 0;
+    
+}
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav {
+    align-content: center;
+    display: flex;
+    margin-right:-500px ;
+    margin-left: 520px;
+    font-size: 20px;
+}
+nav a{
+   background-color: aliceblue;
+    padding: 20px;
+    text-decoration: none;
+    align-content: center;
+    justify-content: center;
+    margin: 20px;
+    border: solid 1px;
+    margin-left: 220px;
+    margin-right: -200px;
+}
+
+.logo{
+    margin: 10px;
+    width: 220px;
+    height: 120px;
+    float: left;
+}
+
+.cajas.icono{
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+}
+
+h1{
+    display: block;
+    font-size: 20px;
+    background-color: silver;
+    color: black;
+    text-align: center;
+    margin: auto;
+    width: 200px;
+    margin-top: 30px;
+}
+
+
+.cajas{
+    margin: auto;
+    align-items: center;
+}
+
+.caja1, .caja2{
+    text-align: center;
+    background-color: #135787;
+    margin: 10px;
+    height: 290px;
+    transition: transform 0.3s ease;
+}
+
+.caja2{
+    height: -60px;
+}
+.caja1:hover{
+    transform: translateY(-40px);
+}
+
+.cajas:hover .caja1{
+    transform: translateY(-50px);
+}
+.cajas:hover .caja2{
+    transform: translateY(130px);
+}
+
+
+
+.imagen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 200px;
+    z-index: -1;
+    padding-inline: 650px;
+    margin-block: 340px;
+}
+   
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #f0f0f0; 
+    text-align: left;
+  }
+  
+  footer select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent; 
+    border: none; 
+    padding: 0; 
+    font-size: inherit; 
+    cursor: pointer;
+ }
