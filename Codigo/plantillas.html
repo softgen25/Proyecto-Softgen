@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantillas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/plantilas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Logo Favicon 16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Logo favicon 1.0.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="img/Logo Favicon 180x180.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg" >
+            <div class="container-fluid pt-2 sm">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/SOFTGEN 3.0.png" alt="SOFTGEN Logo" width="150">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span><i class="bi bi-grid-fill"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li><a class="nav-link" href="creacion.html">Creación</a></li>
+                        <li><a class="nav-link" href="visualizacion.html">Visualización</a></li>
+                        <li><a class="nav-link" href="tablainformes/tablainformes.php">Informes</a></li> <li><a class="nav-link" href="plantillas.html">Plantillas</a></li> </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-person-circle"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Ajustes</a></li>
+                                <li><a class="dropdown-item" href="iniciosesion.html">Cerrar Sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main> <h1 class="text-center mt-5">Plantillas</h1>
+        <p class="text-center">Aquí puedes ver las plantillas que puedes usar para tus informes.</p>
+        <div class="container-lg ">
+            <ul class="menu">
+                <li>
+                    <a href="javascript:void(0);" data-target="jata-categoria">Plantillas Jata</a>
+                    <ul>
+                        <li><a href="javascript:void(0);" data-target="jata-1-card">Informe 1</a></li> <li><a href="javascript:void(0);" data-target="jata-2-card">Informe 2</a></li> <li><a href="javascript:void(0);" data-target="jata-3-card">Informe 3</a></li> <li><a href="javascript:void(0);" data-target="jata-4-card">Informe 4</a></li> </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" data-target="climafresco-categoria" >Plantillas climafresco</a>
+                    <ul>
+                        <li><a href="javascript:void(0);" data-target="climafresco-1-card">Informe 1</a></li> <li><a href="javascript:void(0);" data-target="climafresco-2-card">Informe 2</a></li> <li><a href="javascript:void(0);" data-target="climafresco-3-card">Informe 3</a></li> <li><a href="javascript:void(0);" data-target="climafresco-4-card">Informe 4</a></li> </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" data-target="innovar-categoria">Plantillas Innovar</a>
+                    <ul>
+                        <li><a href="javascript:void(0);" data-target="innovar-1-card">Informe 1</a></li> <li><a href="javascript:void(0);" data-target="innovar-2-card">Informe 2</a></li> <li><a href="javascript:void(0);" data-target="innovar-3-card">Informe 3</a></li> <li><a href="javascript:void(0);" data-target="innovar-4-card">Informe 4</a></li> </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" data-target="climaster-categoria">Plantillas climaster</a>
+                    <ul>
+                        <li><a href="javascript:void(0);" data-target="climaster-1-card">Informe 1</a></li> <li><a href="javascript:void(0);" data-target="climaster-2-card">Informe 2</a></li> <li><a href="javascript:void(0);" data-target="climaster-3-card">Informe 3</a></li> <li><a href="javascript:void(0);" data-target="climaster-4-card">Informe 4</a></li> </ul>
+                </li>
+            </ul>
+        </div>
+        <section class="container mt-4"> <div class="row plantilla-categoria" id="jata-categoria">
+                <div class="col-md-3 plantilla-card" id="jata-1-card"> <div class="card h-100" >
+                        <img src="img/REPORTE_page-0001.jpg" class="card-img-top" alt="Imagen 1">
+                        <div class="card-body text-light d-flex flex-column"> <h5 class="card-title">Informe 1</h5> <p class="card-text flex-grow-1">Formato general</p> <a href="crear_desde_plantilla.php?template=REPORTE_page-0001.jpg" class="btn btn-softgen mt-auto">Crear desde aquí</a> </div>
+                    </div>
+                </div>
+                <div class="col-md-3 plantilla-card" id="jata-2-card"> <div class="card h-100" > <img src="./formatos/Formato para reporte de mantenimiento V2_page-0002.jpg" class="card-img-top" alt="Imagen 2">
+                        <div class="card-body text-light d-flex flex-column">
+                            <h5 class="card-title">Informe 2</h5>
+                            <p class="card-text flex-grow-1">Formato general</p>
+                            <a href="crear_desde_plantilla.php?template=Formato para reporte de mantenimiento V2_page-0002.jpg" class="btn btn-softgen mt-auto">Crear desde aquí</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 plantilla-card" id="jata-3-card"> <div class="card h-100" > <img src="./formatos/FORMATO VARIABLR MANEJADORA_page-0001.jpg" class="card-img-top" alt="Imagen 3">
+                        <div class="card-body text-light d-flex flex-column">
+                            <h5 class="card-title">Informe 3</h5>
+                            <p class="card-text flex-grow-1">Formato general</p>
+                            <a href="crear_desde_plantilla.php?template=FORMATO VARIABLR MANEJADORA_page-0001.jpg" class="btn btn-softgen mt-auto">Crear desde aquí</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 plantilla-card" id="jata-4-card"> <div class="card h-100" > <img src="./formatos/FORMATO VARIABLR MANEJADORA_page-0001.jpg" class="card-img-top" alt="Imagen 4"> <div class="card-body text-light d-flex flex-column">
+                            <h5 class="card-title">Informe 4</h5>
+                            <p class="card-text flex-grow-1">Formato general</p>
+                            <a href="crear_desde_plantilla.php?template=FORMATO VARIABLR MANEJADORA_page-0001.jpg" class="btn btn-softgen mt-auto">Crear desde aquí</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row plantilla-categoria" id="climafresco-categoria">
+                <div class="col-md-3 plantilla-card" id="climafresco-1-card"> <div class="card h-100" > <img src="./formatos/Formato para reporte de mantenimiento V2_page-0001.jpg" class="card-img-top" alt="Imagen Climafresco 1">
+                        <div class="card-body text-light d-flex flex-column">
+                            <h5 class="card-title">Informe 1</h5>
+                            <p class="card-text flex-grow-1">Formato general</p>
+                            <a href="crear_desde_plantilla.php?template=Formato para reporte de mantenimiento V2_page-0001.jpg" class="btn btn-softgen mt-auto">Crear desde aquí</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 plantilla-card" id="climafresco-2-card"> <div class="card h-100" > <img src="./formatos/Formato para reporte de mantenimiento V2_page-0001.jpg" class="card-img-top" alt="Imagen Climafresco 2">
+                        <div class="card-body text-light d-flex flex-column">
+                            <h5 class="card-title">Informe 2</h5>
+                            <p class="card-text flex-grow-1">Formato general</p>
+                            <a href="crear_desde_plantilla.php?template=Formato para reporte de mantenimiento V2_page-0001.jpg" class="btn btn-softgen mt-auto">Crear desde aquí</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 plantilla-card" id="climafresco-3-card"> <div class="card h-100" > <img src="./formatos/Formato para reporte de mantenimiento V2_page-0001.jpg" class="card-img-top" alt="Imagen Climafresco 3">
+                        <div class="card-body text-light d-flex flex-column">
+                            <h5 class="card-title">Informe 3</h5>
+                            <p class="card-text flex-grow-1">Formato general</p>
+                            <a href="crear_desde_plantilla.php?template=Formato para reporte de mantenimiento V2_page-0001.jpg" class="btn btn-softgen mt-auto">Crear desde aquí</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 plantilla-card" id="climafresco-4-card"> <div class="card h-100" > <img src="./formatos/Formato para reporte de mantenimiento V2_page-0001.jpg" class="card-img-top" alt="Imagen Climafresco 4">
+                        <div class="card-body text-light d-flex flex-column">
+                            <h5 class="card-title">Informe 4</h5>
+                            <p class="card-text flex-grow-1">Formato general</p>
+                            <a href="crear_desde_plantilla.php?template=Formato para reporte de mantenimiento V2_page-0001.jpg" class="btn btn-softgen mt-auto">Crear desde aquí</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row plantilla-categoria" id="innovar-categoria">
+                <div class="col-md-3 plantilla-card" id="innovar-1-card"> <div class="card h-100" > <img src="./formatos/FORMATOS DE 3E MTTO_page-0001.jpg" class="card-img-top" alt="Imagen Innovar 1">
+                        <div class="card-body text-light d-flex flex-column">
+                            <h5 class="card-title">Informe 1</h5>
+                            <p class="card-text flex-grow-1">Formato general</p>
+                            <a href="crear_desde_plantilla.php?template=FORMATOS DE 3E MTTO_page-0001.jpg" class="btn btn-softgen mt-auto">Crear desde aquí</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 plantilla-card" id="innovar-2-card"> <div class="card h-100" > <img src="./formatos/FORMATOS DE 3E MTTO_page-0001.jpg" class="card-img-top" alt="Imagen Innovar 2">
+                        <div class="card-body text-light d-flex flex-column">
+                            <h5 class="card-title">Informe 2</h5>
+                            <p class="card-text flex-grow-1">Formato general</p>
+                            <a href="crear_desde_plantilla.php?template=FORMATOS DE 3E MTTO_page-0001.jpg" class="btn btn-softgen mt-auto">Crear desde aquí</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 plantilla-card" id="innovar-3-card"> <div class="card h-100" > <img src="./formatos/FORMATOS DE 3E MTTO_page-0001.jpg" class="card-img-top" alt="Imagen Innovar 3">
+                        <div class="card-body text-light d-flex flex-column">
+                            <h5 class="card-title">Informe 3</h5>
+                            <p class="card-text flex-grow-1">Formato general</p>
+                            <a href="crear_desde_plantilla.php?template=FORMATOS DE 3E MTTO_page-0001.jpg" class="btn btn-softgen mt-auto">Crear desde aquí</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 plantilla-card" id="innovar-4-card"> <div class="card h-100" > <img src="./formatos/FORMATOS DE 3E MTTO_page-0001.jpg" class="card-img-top" alt="Imagen Innovar 4">
+                        <div class="card-body text-light d-flex flex-column">
+                            <h5 class="card-title">Informe 4</h5>
+                            <p class="card-text flex-grow-1">Formato general</p>
+                            <a href="crear_desde_plantilla.php?template=FORMATOS DE 3E MTTO_page-0001.jpg" class="btn btn-softgen mt-auto">Crear desde aquí</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="row plantilla-categoria" id="climaster-categoria">
+                <div class="col-md-3 plantilla-card" id="climaster-1-card"> <div class="card h-100" > <img src="./formatos/REPORTE_page-0001.jpg" class="card-img-top" alt="Imagen Climaster 1">
+                        <div class="card-body text-light d-flex flex-column">
+                            <h5 class="card-title">Informe 1</h5>
+                            <p class="card-text flex-grow-1">Formato general</p>
+                            <a href="crear_desde_plantilla.php?template=REPORTE_page-0001.jpg" class="btn btn-softgen mt-auto">Crear desde aquí</a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-3 plantilla-card" id="climaster-2-card"> <div class="card h-100" > <img src="./formatos/ORDEN DE SERVICIO NEC_page-0001.jpg" class="card-img-top" alt="Imagen Climaster 2">
+                        <div class="card-body text-light d-flex flex-column">
+                            <h5 class="card-title">Informe 2</h5>
+                            <p class="card-text flex-grow-1">Orden de Servicio NEC</p>
+                            <a href="crear_desde_plantilla.php?template=ORDEN DE SERVICIO NEC_page-0001.jpg" class="btn btn-softgen mt-auto">Crear desde aquí</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 plantilla-card" id="climaster-3-card"> <div class="card h-100" > <img src="./formatos/Formato para reporte de mantenimiento V2_page-0001.jpg" class="card-img-top" alt="Imagen Climaster 3">
+                        <div class="card-body text-light d-flex flex-column">
+                            <h5 class="card-title">Informe 3</h5>
+                            <p class="card-text flex-grow-1">Reporte de mantenimiento V2</p>
+                            <a href="crear_desde_plantilla.php?template=Formato para reporte de mantenimiento V2_page-0001.jpg" class="btn btn-softgen mt-auto">Crear desde aquí</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 plantilla-card" id="climaster-4-card"> <div class="card h-100" > <img src="./formatos/FORMATOS DE 3E MTTO_page-0001.jpg" class="card-img-top" alt="Imagen Climaster 4">
+                        <div class="card-body text-light d-flex flex-column">
+                            <h5 class="card-title">Informe 4</h5>
+                            <p class="card-text flex-grow-1">Formato 3E MTTO</p>
+                            <a href="crear_desde_plantilla.php?template=FORMATOS DE 3E MTTO_page-0001.jpg" class="btn btn-softgen mt-auto">Crear desde aquí</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-white mt-5" id="piePagina">
+        <div class="container py-5">
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <h5>Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../loggin/index.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li><a href="creacion.html" class="text-white text-decoration-none">Creación</a></li>
+                        <li><a href="../cliente/visualizacion.html" class="text-white text-decoration-none">Visualización</a></li>
+                        <li><a href="tablainformes.php" class="text-white text-decoration-none">Informes</a></li>
+                        <li><a href="plantillas.html" class="text-white text-decoration-none">Plantillas</a></li>
+                        <li><a href="soporte.html" class="text-white text-decoration-none">Soporte</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5> Información de Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt"></i> Dirección: Calle 90 #12-35, Bogotá, Colombia</li>
+                        <li><i class="bi bi-telephone"></i> Teléfono: +57 312 857 7856</li>
+                        <li><i class="bi bi-envelope"></i> Correo: softgen14@gmail.com</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5>Síguenos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/profile.php?id=61574843906898" class="text-white text-decoration-none"><i class="bi bi-facebook"></i>Facebook</a></li>
+                        <li><a href="https://x.com/Softgen291521" class="text-white text-decoration-none"><i class="bi bi-twitter-x"></i>Twitter</a></li>
+                        <li><a href="https://www.instagram.com/softg_en?igsh=amp3dmF3dzdqbWtq" class="text-white text-decoration-none"><i class="bi bi-instagram"></i>Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center py-3" id="derechos">
+            <p class="mb-0">&copy; 2025 SoftGen. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-+o5j6g"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script>
+        // Script para mostrar/ocultar categorías de plantillas
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuLinks = document.querySelectorAll('.menu a[data-target]');
+            const categorias = document.querySelectorAll('.plantilla-categoria');
+            const plantillaCards = document.querySelectorAll('.plantilla-card'); // Seleccionar todas las tarjetas
+
+            // Ocultar todas las categorías al inicio, excepto la primera si la hubiera
+            categorias.forEach(categoria => {
+                categoria.style.display = 'none';
+            });
+
+             // Ocultar todas las tarjetas individuales al inicio
+            plantillaCards.forEach(card => {
+                card.style.display = 'none';
+            });
+
+
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('data-target');
+
+                    // Si el target es una categoría (termina en '-categoria')
+                    if (targetId.endsWith('-categoria')) {
+                         // Ocultar todas las categorías
+                        categorias.forEach(categoria => {
+                            categoria.style.display = 'none';
+                            // Ocultar todas las tarjetas dentro de esta categoría también
+                            categoria.querySelectorAll('.plantilla-card').forEach(card => {
+                                card.style.display = 'none';
+                            });
+                        });
+
+                        // Mostrar la categoría objetivo y sus tarjetas
+                        const targetCategoria = document.getElementById(targetId);
+                        if (targetCategoria) {
+                            targetCategoria.style.display = 'flex'; // Mostrar como flex para que las tarjetas se alineen
+                            targetCategoria.querySelectorAll('.plantilla-card').forEach(card => {
+                                card.style.display = 'block'; // O mostrar como necesites (block, flex item, grid item)
+                            });
+                        }
+                    } else {
+                         // Si el target es una tarjeta específica (termina en '-card')
+                         // Ocultar todas las tarjetas
+                        plantillaCards.forEach(card => {
+                            card.style.display = 'none';
+                        });
+                        // Ocultar todas las categorías (para asegurar que solo se vea la tarjeta)
+                        categorias.forEach(categoria => {
+                            categoria.style.display = 'none';
+                        });
+
+                        // Mostrar solo la tarjeta objetivo
+                        const targetCard = document.getElementById(targetId);
+                        if (targetCard) {
+                            // Asegurarse de que el contenedor de la tarjeta también sea visible si estaba oculto
+                            const parentCategoria = targetCard.closest('.plantilla-categoria');
+                            if(parentCategoria) {
+                                parentCategoria.style.display = 'flex'; // O el display que uses para la categoría
+                            }
+                            targetCard.style.display = 'block'; // O mostrar como necesites
+                        }
+                    }
+                });
+            });
+
+            // Opcional: Mostrar la primera categoría por defecto al cargar la página
+            const firstCategory = document.querySelector('.plantilla-categoria');
+            if (firstCategory) {
+                firstCategory.style.display = 'flex';
+                firstCategory.querySelectorAll('.plantilla-card').forEach(card => {
+                    card.style.display = 'block';
+                });
+            }
+
+             // Script para resaltar el enlace de navegación activo (similar al de creacion.html)
+            const currentPagePath = window.location.pathname;
+            const currentPageFilename = currentPagePath.substring(currentPagePath.lastIndexOf('/') + 1) || 'index.html'; // Asume index.html si es la raíz
+
+            const navLinks = document.querySelectorAll('.navbar-nav.me-auto .nav-link');
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                link.removeAttribute('aria-current');
+
+                const linkHref = link.getAttribute('href');
+                const linkFilename = linkHref.substring(linkHref.lastIndexOf('/') + 1);
+
+                if (linkFilename === currentPageFilename) {
+                    link.classList.add('active');
+                    link.setAttribute('aria-current', 'page');
+                }
+                 // Caso especial para la raíz del sitio "/"
+                else if (currentPagePath === '/' && linkFilename === 'index.html') {
+                    link.classList.add('active');
+                    link.setAttribute('aria-current', 'page');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

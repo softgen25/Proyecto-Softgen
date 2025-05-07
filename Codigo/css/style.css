@@ -1,0 +1,206 @@
+:root {
+    --sidebar-bg: #135787;
+    --sidebar-text: #ecf0f1;
+    --sidebar-active: #fff;
+    --card-bg: #ffffff;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: saira;
+    background-color: #E4F7FF;
+}
+
+.sidebar {
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+    width: 250px;
+    font-family: saira;
+}
+
+.sidebar .nav-link {
+    color: white;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.sidebar .nav-link:hover, .sidebar .nav-link.active {
+    background-color: var(--sidebar-active);
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    font-family: saira;
+}
+
+.username {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0 15px 20px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+#agregar {
+    background-color: #E4F7FF;
+    border-color: #E4F7FF;
+    color: #135787;
+}
+
+.btn btn-primary {
+    background-color: #E4F7FF;
+}
+
+.card-custom {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 20px;
+    border: none;
+    font-family: saira;
+}
+
+.card-header-custom {
+    background-color: transparent;
+    border-bottom: 1px solid #eee;
+    padding: 15px 20px;
+    font-weight: 600;
+}
+
+.a {
+    background-color: white;
+    border-color: transparent;
+}
+
+#cuadro {
+    background-color: #E4F7FF;
+}
+
+.card-body-custom {
+    padding: 20px;
+}
+
+.status-completed {
+    font-weight: bold;
+}
+
+.status-ongoing {
+    font-weight: bold;
+}
+
+.status-denied {
+    font-weight: bold;
+}
+
+.divider {
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+.large-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.secondary-text {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.date-display {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.user-email {
+    font-family: monospace;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+#piePagina {
+    background: linear-gradient(45deg, #135787, #1982c4);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    font-family: saira;
+}
+
+#piePagina h5 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#piePagina ul {
+    padding: 0;
+    list-style: none;
+}
+
+#piePagina ul li {
+    margin: 8px 0;
+}
+
+#piePagina a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+#piePagina a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+#piePagina i {
+    font-size: 1.3rem;
+    margin-right: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#piePagina a:hover i {
+    transform: scale(1.2);
+}
+
+#piePagina .col-md-4 {
+    margin-bottom: 20px;
+}
+
+#derechos {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    font-size: 0.9rem;
+}
